@@ -18,6 +18,8 @@
   </div>
 
   <div class="games">  
+    <mat-progress-bar mode="query" *ngIf="games==null"></mat-progress-bar>
+    <mat-spinner *ngIf="games==null"></mat-spinner>
     <ng-container *ngFor="let game of games">
       <div class="game" (click)="openGameDetails(game.id)">
         <div class="game-thumb-container">
